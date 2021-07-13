@@ -10,6 +10,4 @@ public class StringTest {
         String actual = "abc".replace("b", "d");
         assertThat(actual).isEqualTo("adc");
     }
-
-    zzzzz
 }
