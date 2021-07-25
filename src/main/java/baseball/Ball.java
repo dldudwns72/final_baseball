@@ -16,7 +16,7 @@ public class Ball {
     }
 
     private void isValid(int ballNo){
-        if(ballNo <= MIN_BALLNO || ballNo > MAX_BALLNO){
+        if(ballNo < MIN_BALLNO || ballNo > MAX_BALLNO){
 //            throw new IllegalArgumentException(INVALID_BALL_RANGE_MESSAGE);
             throw new InvalidBallRangeException(INVALID_BALL_RANGE_MESSAGE);
         }

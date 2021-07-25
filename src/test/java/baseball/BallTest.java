@@ -15,7 +15,11 @@ public class BallTest {
         }).isInstanceOf(InvalidBallRangeException.class).hasMessage("공 숫자의 범위를 벗어났습니다.");
     }
 
+    @Test
+    @DisplayName("공 생성")
+    void createBall(){
+        Ball ball = new Ball(1,9);
 
-
+    }
 
 }
