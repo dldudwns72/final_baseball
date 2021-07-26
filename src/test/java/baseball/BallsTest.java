@@ -14,9 +14,5 @@ public class BallsTest {
     void createBalls(){
         Balls balls = new Balls(Arrays.asList(1,2,3));
 
-        assertThat(balls.getUserBalls().get(0).getBallNo()).isEqualTo(1);
-        assertThat(balls.getUserBalls().get(1).getBallNo()).isEqualTo(2);
-        assertThat(balls.getUserBalls().get(2).getBallNo()).isEqualTo(3);
-
     }
 }

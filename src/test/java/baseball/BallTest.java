@@ -16,10 +16,11 @@ public class BallTest {
     }
 
     @Test
-    @DisplayName("공 생성")
-    void createBall(){
+    @DisplayName("공 위치와 숫자가 일치하면 STRIKE")
+    void strike(){
         Ball ball = new Ball(1,9);
-
+        BallStatus status = ball.play(ball.getPosition(), ball.getBallNo());
+        assertThat(status).isEqualTo(BallStatus.STRIKE);
     }
 
 }

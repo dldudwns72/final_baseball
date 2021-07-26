@@ -22,6 +22,18 @@ public class Ball {
         }
     }
 
+    public BallStatus play(int position, int ballNo){
+        if(position == this.position && ballNo == this.ballNo){
+            return BallStatus.STRIKE;
+        }
+
+        if(position != this.position && ballNo == this.ballNo){
+            return BallStatus.BALL;
+        }
+
+        return BallStatus.NOTHING;
+    }
+
     public int getPosition() {
         return position;
     }
