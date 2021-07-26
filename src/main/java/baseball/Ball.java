@@ -27,18 +27,17 @@ public class Ball {
             return BallStatus.STRIKE;
         }
 
-        if(position != this.position && ballNo == this.ballNo){
+        if(isMatchBall(position,ballNo)){
             return BallStatus.BALL;
         }
 
         return BallStatus.NOTHING;
     }
 
-    public int getPosition() {
-        return position;
-    }
-
-    public int getBallNo() {
-        return ballNo;
+    private boolean isMatchBall(int position, int ballNo) {
+        if (position != this.position && ballNo == this.ballNo) {
+            return true;
+        }
+        return false;
     }
 }
