@@ -31,6 +31,15 @@ public class BallTest {
         assertThat(status).isEqualTo(BallStatus.BALL);
     }
 
+    @Test
+    @DisplayName("공 위치가 다르며 숫자도 다를 경우 NOTHING")
+    void nothing(){
+        Ball ball = new Ball(1,9);
+        BallStatus status = ball.play(2,3);
+        assertThat(status).isEqualTo(BallStatus.NOTHING);
+    }
+
+
 
 
 
