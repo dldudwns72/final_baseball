@@ -5,21 +5,25 @@ import java.util.List;
 
 public class Balls {
 
-    private List<Ball> userBalls;
+    private List<Ball> answers;
 
     public Balls(List<Integer> answers){
         List<Ball> userBalls = new ArrayList<>();
 
         for (int i = 0; i < 3; i++) {
-            System.out.print(answers.get(i));
             userBalls.add(new Ball(i+1, answers.get(i)));
         }
 
-        this.userBalls = userBalls;
+        this.answers = userBalls;
     }
 
-    public List<Ball> getUserBalls() {
-        return userBalls;
-    }
 
+    public BallStatus play(Ball ball) {
+        return answers.stream()
+                .map(answer -> answer.play(ball.getPosition(), ball.getBallNo()))
+                .filter(BallStatus::isNotNothing) // status -> status.isNotNothing() 과 동일
+                .findFirst()
+                .orElse(BallStatus.NOTHING);
+
+    }
 }

@@ -40,4 +40,12 @@ public class Ball {
         }
         return false;
     }
+
+    public int getPosition() {
+        return position;
+    }
+
+    public int getBallNo() {
+        return ballNo;
+    }
 }
