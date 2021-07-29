@@ -29,7 +29,7 @@ public class BallsTest {
     @DisplayName("다른 포지션 다른 숫자 = NOTHING")
     void ball()
     {
-        BallStatus status = answers.play(new Ball(1,3));
+        BallStatus status = answers.play(new Ball(1,2));
         assertThat(status).isEqualTo(BallStatus.BALL);
     }
 
