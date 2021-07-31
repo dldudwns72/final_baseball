@@ -7,6 +7,13 @@ import java.util.*;
 
 public class Game {
     public static void main(String args[]) {
+        Random random = new Random();
+
+        int randomNumber = random.nextInt(9) +1 ; // 1부터 9까지의 랜덤한 수 생성
+
+        Balls answers = new Balls(Arrays.asList(randomNumber,randomNumber,randomNumber));
+
+
 
     }
 
