@@ -14,6 +14,7 @@ public class Judgement {
     }
 
     public boolean hasPlcae(List<Integer> computer,int place, int number){
-        return  false;
+        return (computer.get(place) == number);
+
     }
 }

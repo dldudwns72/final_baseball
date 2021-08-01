@@ -15,6 +15,10 @@ public class Application {
         Judgement judgement = new Judgement();
         int count = judgement.correctCount(Arrays.asList(1,5,3),Arrays.asList(1,2,3));
 
-        System.out.print("count" + count);
+        System.out.println(count);
+
+        boolean place = judgement.hasPlcae(Arrays.asList(1,5,3),0,2);
+        System.out.println(place);
+
     }
 }
