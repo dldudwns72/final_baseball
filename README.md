@@ -1,7 +1,7 @@
 ## 숫자 야구게임 요구사항
 
-- [ ] 공 (Ball)                 
-  - [ ] 공은 1이상 9이하여야 한다. (rangeValidation)
+- [X] 공 (Ball)                 
+  - [X] 공은 1이상 9이하여야 한다. (rangeValidation)
     
 
 - [ ] 공 위치 (Position)
