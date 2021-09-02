@@ -5,10 +5,12 @@ public class Ball {
     private static final int MAX_BALL = 9;
 
     private int ball;
+    private Position position;
 
-    public Ball(int ball){
+    public Ball(Position position, int ball){
         rangeValidation(ball);
         this.ball = ball;
+        this.position = position;
     }
 
     private void rangeValidation(int ball){
