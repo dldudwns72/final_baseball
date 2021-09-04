@@ -1,23 +1,20 @@
 package baseball;
 
-import java.util.List;
+import java.util.Set;
 
 public class Balls {
 
-    private List<Ball> balls;
+    private Set<Ball> balls;
 
-    public Balls(List<Ball> balls){
-        ballsCountOver(balls.size());
+    public Balls(Set<Ball> balls) {
         this.balls = balls;
     }
 
-    public List<Ball> getBalls() {
+    public Set<Ball> getBalls() {
         return balls;
     }
 
-    private void ballsCountOver(int size){
-        if(size != 3){
-            throw new IllegalArgumentException("공의 자리수는 세자리수이여야 합니다.");
-        }
-    }
+
+
+
 }
