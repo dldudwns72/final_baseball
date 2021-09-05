@@ -5,13 +5,15 @@ public class Ball {
     private static final int MAX_BALL = 9;
 
     private int ball;
-    private Position position;
+    private int position;
 
-    public Ball(Position position, int ball){
+    private int x;
+
+    public Ball(int position, int ball){
         rangeValidation(ball);
         this.ball = ball;
         this.position = position;
-    }
+   }
 
     private void rangeValidation(int ball){
         if(ball < MIN_BALL  || ball > MAX_BALL)

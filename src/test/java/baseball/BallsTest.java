@@ -4,22 +4,22 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class BallsTest {
 
     private Balls balls;
-    private Set<Ball> computerBalls;
+    private List<Ball> computerBalls;
 
     @BeforeEach
     public void setUp() {
-        computerBalls = new HashSet<>();
-        computerBalls.add(new Ball(new Position(0),1));
-        computerBalls.add(new Ball(new Position(1),2));
-        computerBalls.add(new Ball(new Position(2),3));
+        computerBalls = new ArrayList<>();
+        computerBalls.add(new Ball(0,1));
+        computerBalls.add(new Ball(1,2));
+        computerBalls.add(new Ball(2,2));
 
         balls = new Balls(computerBalls);
     }

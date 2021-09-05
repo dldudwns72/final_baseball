@@ -9,7 +9,7 @@
 
 - [ ] 세개의 공 (Balls)
   - [ ] 세개의 공은 서로 중복될 수 없다. (duplicatedValidation)
-  
+  - [ ] 하나의 공이 생성될 때 마다 포지션의 값이 1씩 증가한다.
 
 - [ ] 판별 (Judge)
   - [ ] 스트라이크 (isStrike)

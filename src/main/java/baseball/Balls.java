@@ -1,20 +1,22 @@
 package baseball;
 
+import java.util.List;
 import java.util.Set;
 
 public class Balls {
 
-    private Set<Ball> balls;
+    private List<Ball> balls;
 
-    public Balls(Set<Ball> balls) {
+    public Balls(List<Ball> balls) {
+
         this.balls = balls;
     }
 
-    public Set<Ball> getBalls() {
+    public List<Ball> getBalls() {
         return balls;
     }
 
 
 
-
 }
+
