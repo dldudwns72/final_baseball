@@ -7,8 +7,6 @@ public class Ball {
     private int ball;
     private int position;
 
-    private int x;
-
     public Ball(int position, int ball){
         rangeValidation(ball);
         this.ball = ball;
@@ -24,4 +22,7 @@ public class Ball {
         return ball;
     }
 
+    public int getPosition() {
+        return position;
+    }
 }

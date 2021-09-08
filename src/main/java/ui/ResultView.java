@@ -11,4 +11,5 @@ public class ResultView {
     public static void gameResult() {
         System.out.println();
     }
+
 }
