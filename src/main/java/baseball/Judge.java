@@ -2,31 +2,29 @@ package baseball;
 
 public class Judge {
 
-    private Ball ball1;
-    private Ball ball2;
+    private Ball computerBall;
+    private Ball userBall;
 
-    public Judge(Ball ball1, Ball ball2) {
-        this.ball1 = ball1;
-        this.ball2 = ball2;
+    public Judge(Ball computerBall, Ball userBall) {
+        this.computerBall = computerBall;
+        this.userBall = userBall;
     }
 
     public String discriminate(){
-        if(ball1.getBall() == ball2.getBall()){
-            return isStrike(ball1.getPosition(),ball2.getPosition());
+
+        if(computerBall.getBall() == userBall.getBall()){
+            return strikeOrBall(computerBall.getPosition(),userBall.getPosition());
         }
+
         return "NOTHING";
     }
 
-    private String isStrike(int ballPosition1, int ballPosition2){
-        if(ballPosition1 == ballPosition2){
+    private String strikeOrBall(int computerBallPosition, int userBallPosition){
+        if(computerBallPosition == userBallPosition){
             return "STRIKE";
         }
 
-        if(ballPosition1 != ballPosition2){
-            return "BALL";
-        }
-
-        return "NOTHING";
+        return "BALL";
     }
 
 
