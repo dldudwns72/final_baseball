@@ -18,57 +18,43 @@ public class JudgeTest {
                 Arrays.asList(
                         new Ball(0, 1),
                         new Ball(1, 2),
-                        new Ball(0, 3)));
+                        new Ball(2, 3)));
     }
 
     @Test
     @DisplayName("스트라이크 판별")
     public void isStrike() {
-        Ball firstUserBall = new Ball(0, 1);
+        Ball userBall = new Ball(0, 1);
 
-        String result = null;
+        Judge judge = new Judge(computerBalls,userBall);
 
-        for (int i = 0; i < computerBalls.getBalls().size(); i++) {
-            Ball computerBall = computerBalls.getBalls().get(i);
-            if(computerBall.getBall() == firstUserBall.getBall()){
-                if(computerBall.getPosition() == firstUserBall.getPosition()){
-                    result = "STRIKE";
-                }
-
-                if(computerBall.getPosition() != firstUserBall.getPosition()){
-                    result = "BALL";
-                }
-            }
-        }
-
+        String result = judge.discriminate();
 
         assertThat(result).isEqualTo("STRIKE");
     }
 
-//    @Test
-//    @DisplayName("볼 판별")
-//    public void isBall() {
-//        Ball ball1 = new Ball(0, 1);
-//        Ball ball2 = new Ball(1, 1);
-//
-//        Judge judge = new Judge(ball1, ball2);
-//
-//        String result = judge.discriminate();
-//
-//        assertThat(result).isEqualTo("BALL");
-//    }
-//
-//    @Test
-//    @DisplayName("낫씽 판별")
-//    public void isNothing() {
-//        Ball ball1 = new Ball(0, 1);
-//        Ball ball2 = new Ball(1, 2);
-//
-//        Judge judge = new Judge(ball1, ball2);
-//
-//        String result = judge.discriminate();
-//
-//        assertThat(result).isEqualTo("NOTHING");
-//    }
+    @Test
+    @DisplayName("볼 판별")
+    public void isBall() {
+        Ball userBall = new Ball(0, 3);
+
+        Judge judge = new Judge(computerBalls, userBall);
+
+        String result = judge.discriminate();
+
+        assertThat(result).isEqualTo("BALL");
+    }
+
+    @Test
+    @DisplayName("낫씽 판별")
+    public void isNothing() {
+        Ball userBall = new Ball(0, 5);
+
+        Judge judge = new Judge(computerBalls, userBall);
+
+        String result = judge.discriminate();
+
+        assertThat(result).isEqualTo("NOTHING");
+    }
 
 }
