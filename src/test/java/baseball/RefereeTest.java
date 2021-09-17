@@ -15,7 +15,7 @@ public class RefereeTest {
 
     @BeforeEach
     public void setUp(){
-        computerBalls = new Balls(Arrays.asList(new Ball(0,1),new Ball(1,2),new Ball(2,5)));
+        computerBalls = new Balls(Arrays.asList(new Ball(0,1),new Ball(1,2),new Ball(2,3)));
     }
 
     @Test
@@ -27,22 +27,10 @@ public class RefereeTest {
 
         String gameResult = referee.gameResult();
 
-        assertThat(gameResult).isEqualTo("2NOTHING 1BALL 0STRIKE");
+        assertThat(gameResult).isEqualTo("1BALL");
 
     }
 
-    @Test
-    @DisplayName("2볼")
-    public void twoBall(){
-        userBalls = new Balls(Arrays.asList(new Ball(0,2),new Ball(1,5),new Ball(2,4)));
-
-        Referee referee = new Referee(computerBalls,userBalls);
-
-        String gameResult = referee.gameResult();
-
-        assertThat(gameResult).isEqualTo("1NOTHING 2BALL 0STRIKE");
-
-    }
 
 
 }
