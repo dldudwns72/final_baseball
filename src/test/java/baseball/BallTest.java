@@ -26,15 +26,6 @@ public class BallTest {
         .hasMessage("공의 범위는 1이상 9이하 입니다.");
     }
 
-//    @Test
-//    @DisplayName("세자리를 넘긴 공 생성 실패")
-//    public void rangePositionValidation(){
-//        assertThatThrownBy(()->{
-//            Ball ball1 = new Ball(3,0);
-//        }).isInstanceOf(PositionException.class)
-//          .hasMessage("공의 위치는 0이상 2하이여야 합니다.");
-//    }
-
 
 
 }

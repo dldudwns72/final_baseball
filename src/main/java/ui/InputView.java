@@ -14,6 +14,7 @@ public class InputView {
 
         for (int i = 0; i < 3; i++) {
             int randomNumber = new Random().nextInt(10) - 1;
+            if(balls.contains(randomNumber)) { continue; }
             balls.add(new Ball(i, randomNumber));
         }
 
